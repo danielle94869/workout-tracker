@@ -14,15 +14,15 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.4",
-    "morgan": "^1.10.0"
+    "morgan": "^1.9.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielle94869/workout-tracker.git"
+    "url": "git+https://github.com/Amadueno/fitnessTracker.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/danielle94869/workout-tracker/issues"
+    "url": "https://github.com/Amadueno/fitnessTracker/issues"
   },
-  "homepage": "https://github.com/danielle94869/workout-tracker#readme"
+  "homepage": "https://github.com/Amadueno/fitnessTracker#readme"
 }
