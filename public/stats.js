@@ -8,6 +8,7 @@ fetch('/api/workouts/range')
     populateChart(data)
   })
 
+
 API.getWorkoutsInRange()
 
 function generatePalette () {
@@ -34,16 +35,16 @@ function generatePalette () {
 }
 function populateChart (data) {
   const durations = duration(data)
-  const pounds = calculateTotalWeight(data)
-  const workouts = workoutNames(data)
+  let pounds = calculateTotalWeight(data)
+  let workouts = workoutNames(data)
   const colors = generatePalette()
 
-  const line = document.querySelector('#canvas').getContext('2d')
-  const bar = document.querySelector('#canvas2').getContext('2d')
-  const pie = document.querySelector('#canvas3').getContext('2d')
-  const pie2 = document.querySelector('#canvas4').getContext('2d')
+  let line = document.querySelector('#canvas').getContext('2d')
+  let bar = document.querySelector('#canvas2').getContext('2d')
+  let pie = document.querySelector('#canvas3').getContext('2d')
+  let pie2 = document.querySelector('#canvas4').getContext('2d')
 
-  const lineChart = new Chart(line, {
+  let lineChart = new Chart(line, {
     type: 'line',
     data: {
       labels: [
@@ -91,7 +92,7 @@ function populateChart (data) {
     }
   })
 
-  const barChart = new Chart(bar, {
+  let barChart = new Chart(bar, {
     type: 'bar',
     data: {
       labels: [
@@ -144,7 +145,7 @@ function populateChart (data) {
     }
   })
 
-  const pieChart = new Chart(pie, {
+  let pieChart = new Chart(pie, {
     type: 'pie',
     data: {
       labels: workouts,
@@ -164,7 +165,7 @@ function populateChart (data) {
     }
   })
 
-  const donutChart = new Chart(pie2, {
+  let donutChart = new Chart(pie2, {
     type: 'doughnut',
     data: {
       labels: workouts,
